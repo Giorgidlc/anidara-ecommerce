@@ -49,7 +49,8 @@ export const Image: React.FC<MediaProps> = (props) => {
 
     const filename = fullFilename
 
-    src = `${process.env.NEXT_PUBLIC_SERVER_URL}${url}`
+    // src = `${process.env.NEXT_PUBLIC_SERVER_URL}${url}` --> colocar este cuando se suba a Vercel
+    src = `${url}` //Usar esto solo para desarrollo local
   }
 
   // NOTE: this is used by the browser to determine which image to download at different screen sizes

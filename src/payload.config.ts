@@ -12,6 +12,7 @@ import {
 } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
+import { es } from 'payload/i18n/es'
 import { fileURLToPath } from 'url'
 
 import { Categories } from '@/collections/Categories'
@@ -36,6 +37,9 @@ export default buildConfig({
       beforeDashboard: ['@/components/BeforeDashboard#BeforeDashboard'],
     },
     user: Users.slug,
+  },
+  i18n: {
+    supportedLanguages: { es },
   },
   collections: [Users, Pages, Categories, Media],
   db: postgresAdapter({
